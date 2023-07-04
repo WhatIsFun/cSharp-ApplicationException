@@ -39,11 +39,38 @@
                 Console.WriteLine("The exception caught and handled " + e.Message);
             }
 
+
+            //Task 3:
+            
+            Console.WriteLine("Enter file path>> ");
+            string filePath = Console.ReadLine();
+            try
+            {
+                using (StreamReader sR = new StreamReader(filePath))
+                {
+                    string line;
+                    while ((line = sR.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine("File not found in this path. " + e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("File read completed. ");
+            }
+
         }
         public static void Method1()
         {
             throw new Exception("Exception Method1");
         }
 
+
+        
     }
 }
