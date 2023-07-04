@@ -15,16 +15,34 @@
             //Console.WriteLine(Student.validateStudents(students));
 
             // Task 1: 
-            BankAccount balance = new BankAccount(100);
+            //BankAccount balance = new BankAccount(100);
+            //try
+            //{
+            //    balance.Withdraw(200);
+            //}
+            //catch (InsufficientFundsException e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
+
+            //Task 2: Write a program that contains multiple methods.
+            //In one method, throw an exception.
+            //Call that method from another method and catch the exception.
+            //Display a message indicating that the exception was caught and handled
+
             try
             {
-                balance.Withdraw(200);
+                Method1();
             }
-            catch (InsufficientFundsException e)
+            catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("The exception caught and handled " + e.Message);
             }
 
+        }
+        public static void Method1()
+        {
+            throw new Exception("Exception Method1");
         }
 
     }
