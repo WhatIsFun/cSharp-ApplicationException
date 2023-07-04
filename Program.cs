@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+
             Student[] students =
             {
                 new Student("Adhary","1233", 19),
