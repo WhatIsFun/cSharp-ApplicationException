@@ -27,7 +27,7 @@ namespace cSharp_ApplicationException
                     if (students[i].regstrationNumber == students[j].regstrationNumber)
                     {
                         //return false;
-                        throw new ApplicationException("Two student have same regstration number.");
+                        throw new ApplicationException("Two student have same regstration number. \r\nStudent Name: " + students[i].name + "\r\nRegestraction Number: " + students[i].regstrationNumber + "\r\n With \r\nStudent Name: " + students[j].name + "\r\nRegestraction Number: " + students[j].regstrationNumber);
 
                     }
                 }
